@@ -11,5 +11,25 @@ class Lampe{
 +isAllume() : boolean
 +equals() : boolean
 }
+
+class Telecommande{
++ Telecommande()
++ getLampes()
++ getHifis()
++ ajouterLampe(Lampe)
++ ajouterHifi(Hifi)
++ activerLampe(int)
++ activerHifi(int)
++ desactiverLampe(int)
++ desactiverHifi(int)
++ activerTout()
++ toString(): String
+
+
+}
 '''relations
+Telecommande "1" --> "*"Lampe: -lampes
+Telecommande "1" --> "*"Hifi: -hifis
+
+
 @enduml

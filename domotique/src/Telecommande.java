@@ -85,7 +85,6 @@ public class Telecommande {
     public void desactiverHifi(int indiceHifi){
         this.hifis.get(indiceHifi).eteindre();
     }
-
     /**
      * Méthode qui allume toutes les lampes de la liste et les chaines hifi de la liste
      */
