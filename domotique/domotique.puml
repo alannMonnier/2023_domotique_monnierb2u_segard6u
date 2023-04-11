@@ -32,8 +32,12 @@ class Hifi{
 +toString() : String
 }
 
+class Television{
+
+}
+
 '''relations
 Telecommande "1" --> "*"Lampe: -lampes
 Telecommande "1" --> "*"Hifi: -hifis
-
+Telecommande "1" --> "0.1"Television: -televisions
 @enduml
