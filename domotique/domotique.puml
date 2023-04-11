@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+'''classes
+class Lampe{
+-nom : String
+-allume : boolean
++Lampe(String)
++allumer() : void
++éteindre() : void
++toString() : String
++isAllume() : boolean
++equals() : boolean
+}
+'''relations
+@enduml
