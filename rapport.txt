@@ -1,0 +1,20 @@
+Segard Mathis
+Monnier Alann
+
+					Compte rendue TD7
+
+
+
+Question 3:
+
+Dans la classe Telecommande on a utiliser les mêmes méthodes qu'avec les lampes pour le Hifi. On a également ajouté un attribut liste contentenant des objets hifi. 
+Nous ne pouvons pas récupérer le nombre de lignes car nous avons tout commité d'un coup étant donné que nous avions préparé les classes chez nous pour le TP. 
+
+Question 5:
+
+Oui, on a copié collé les même méthode déjà présentes au départ mais on a changés les paramètres et la liste visée. Egalement on a ajouter un attribut liste avec l'element Hifi. 
+Si il y avait un bug on augmenterait son impact en faisant du copier coller. On pourra difficilement modifier les indices car on ne peut les identifiés. Le code est pour l'instant facilement maintenable car i n'y a pas beaucoup de classe et de code pour l'instant. Pourrait devenir plus compliqué à gérer plus tard. 
+
+Question 6:
+Les flèches vont de télécommande vers chaque classe qu'elle contient dans une liste par classe. Ce que ça implique c'est que si on modifie une des classes (Lampe ou Hifi ) alors on devra modifier aussi les méthodes de Telecommande. 
+Si la chaine hifi ne possède plus les méthodes éteindre et allumer mais augmenterSon ou baisserSon alors il faudrait changer le nom des méthodes dabs classe Hifi et Telecommande. 
