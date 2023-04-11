@@ -1,12 +1,11 @@
 @startuml
-'https://plantuml.com/sequence-diagram
 '''classes
 class Lampe{
 -nom : String
 -allume : boolean
 +Lampe(String)
 +allumer() : void
-+éteindre() : void
++eteindre() : void
 +toString() : String
 +isAllume() : boolean
 +equals() : boolean
@@ -24,12 +23,17 @@ class Telecommande{
 + desactiverHifi(int)
 + activerTout()
 + toString(): String
-
-
 }
+
+class Hifi{
+-son : int
++allumer() : void
++eteindre() : void
++toString() : String
+}
+
 '''relations
 Telecommande "1" --> "*"Lampe: -lampes
 Telecommande "1" --> "*"Hifi: -hifis
-
 
 @enduml
