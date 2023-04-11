@@ -27,13 +27,21 @@ class Telecommande{
 
 class Hifi{
 -son : int
++Hifi()
 +allumer() : void
 +eteindre() : void
 +toString() : String
 }
 
 class Television{
-
+-son : int
+-allume : boolean
++Television()
++allumer() : void
++eteindre() : void
++augmenterVolume() : void
++diminuerVolume() : void
++toString() : String
 }
 
 '''relations
