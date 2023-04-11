@@ -5,10 +5,18 @@ class Lampe{
 -allume : boolean
 +Lampe(String)
 +allumer() : void
-+éteindre() : void
++eteindre() : void
 +toString() : String
 +isAllume() : boolean
 +equals() : boolean
 }
+class Hifi{
+-son : int
++allumer() : void
++eteindre() : void
++toString() : String
+}
 '''relations
+Telecommande "*" --> "*"Lampe : -lampes
+Telecommande "*" --> "*"Hifi : -hifis
 @enduml
