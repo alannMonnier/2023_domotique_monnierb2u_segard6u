@@ -53,7 +53,7 @@ class Cheminee{
     + getLumiere():int
 }
 
-Abstract class TelecommandeSpeciale{
+class TelecommandeChemine{
 
 }
 
@@ -62,6 +62,6 @@ Telecommande "1" -> "*"Telecommandable: -telecommandables
 Hifi  .up.|> Telecommandable
 Television .up.|> Telecommandable
 Lampe .up.|> Telecommandable
-TelecommandeSpeciale ..|> Telecommandable
+TelecommandeSpeciale .up.|> Telecommandable
 TelecommandeSpeciale "*" --> "*" Cheminee : -cheminees
 @endum
