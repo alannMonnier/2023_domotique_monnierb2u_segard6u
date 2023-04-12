@@ -50,7 +50,8 @@ class Television{
 }
 
 '''relations
-Telecommande "1" --> "*"Lampe: -lampes
-Telecommande "1" --> "*"Hifi: -hifis
-Telecommande "1" --> "0.1"Television: -televisions
+Telecommande "1" --> "*"Telecommandable: -telecommandables
+Hifi "1" ..> "*"Telecommandable
+Television "1"..> "0.1"Telecommandable
+Lampe "1"..> "0.1"Telecommandable
 @enduml
