@@ -45,8 +45,8 @@ class Television{
 }
 
 '''relations
-Telecommande "1" --> "*"Telecommandable: -telecommandables
-Hifi "1" ..> "*"Telecommandable
-Television "1"..> "0.1"Telecommandable
-Lampe "1"..> "0.1"Telecommandable
+Telecommande "1" -> "*"Telecommandable: -telecommandables
+Hifi "1" .up.|> "*"Telecommandable
+Television "1".up.|> "0.1"Telecommandable
+Lampe "1".up.|> "0.1"Telecommandable
 @enduml
