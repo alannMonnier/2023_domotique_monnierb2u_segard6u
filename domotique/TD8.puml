@@ -40,9 +40,28 @@ class Television{
 +toString() : String
 }
 
+Interface Telecommandable{
+ + allumer(): void
+ + eteindre() : void
+}
+
+
+class Cheminee{
+    + intensite: int
+    +Cheminee() : void
+    + changerIntensite(int):void
+    + getLumiere():int
+}
+
+class TelecommandeSpeciale{
+
+}
+
 '''relations
 Telecommande "1" -> "*"Telecommandable: -telecommandables
-Hifi "1" .up.|> "*"Telecommandable
-Television "1".up.|> "0.1"Telecommandable
-Lampe "1".up.|> "0.1"Telecommandable
-@enduml
+Hifi  .up.|> Telecommandable
+Television .up.|> Telecommandable
+Lampe .up.|> Telecommandable
+TelecommandeSpeciale ..|> Telecommandable
+TelecommandeSpeciale "*" --> "*" Cheminee : -cheminees
+@endum
