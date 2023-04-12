@@ -1,9 +1,5 @@
 @startuml
-'''classes
-Interface Telecommandable{
- + allumer(): void
- + eteindre() : void
-}
+'https://plantuml.com/sequence-diagram
 
 class Lampe{
 -nom : String
@@ -18,15 +14,10 @@ class Lampe{
 
 class Telecommande{
 + Telecommande()
-+ getLampes()
-+ getHifis()
-+ ajouterLampe(Lampe)
-+ ajouterHifi(Hifi)
-+ activerLampe(int)
-+ activerHifi(int)
-+ desactiverLampe(int)
-+ desactiverHifi(int)
 + activerTout()
++ ajouterTelecommandable(Telecommandable)
++ allumer(int)
++ eteindre(int)
 + toString(): String
 }
 
@@ -50,8 +41,10 @@ class Television{
 }
 
 '''relations
-Telecommande "1" -> "*"Telecommandable: -telecommandables
-Hifi "1" .up.|> "*"Telecommandable
-Television "1".up.|> "0.1"Telecommandable
-Lampe "1".up.|> "0.1"Telecommandable
+Telecommande "1" --> "*"Lampe: -lampes
+Telecommande "1" --> "*"Hifi: -hifis
+Telecommande "1" --> "0.1"Television: -televisions
+
+
+
 @enduml
