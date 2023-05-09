@@ -6,13 +6,15 @@ public class Main {
 		Telecommande t=new Telecommande();
 		
 		
-		Lampe l1=new Lampe("Lampe1");
-		t.ajouterAppareil(l1);
-		
-		/****** A COMPLETER ******/
-		// TODO
-		
-		TelecommandeGraphique tg=new TelecommandeGraphique(t);
+
+		t.ajouterTelecommandable(new Lampe("Lampe1"));
+		t.ajouterTelecommandable(new Lampe("Lampe2"));
+		t.ajouterTelecommandable(new Lampe("Lampe3"));
+		t.ajouterTelecommandable(new Lampe("Lampe4"));
+		t.ajouterTelecommandable(new Lampe("Lampe5"));
+
+
+		TelecommandeGraphique tg = new TelecommandeGraphique(t);
 		
 
 		

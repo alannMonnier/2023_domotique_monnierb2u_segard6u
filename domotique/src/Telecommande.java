@@ -37,6 +37,13 @@ public class Telecommande {
         this.telecommandables.get(indiceTelecommandable).allumer();
     }
 
+    /**
+     * Retourne le nombre d'appareils
+     * @return le nombre d apparreils
+     */
+    public int getNombre(){
+        return telecommandables.size();
+    }
 
 
     /**
@@ -66,5 +73,13 @@ public class Telecommande {
             s.append(t.toString());
         }
         return s.toString();
+    }
+
+    public void desactiverAppareil(int num){
+        this.eteindre(num);
+    }
+
+    public void activerAppareil(int num){
+        this.allumer(num);
     }
 }
