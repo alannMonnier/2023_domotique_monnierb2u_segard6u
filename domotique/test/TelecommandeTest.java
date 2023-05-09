@@ -14,10 +14,10 @@ class TelecommandeTest {
         Lampe l = new Lampe("Lampe1");
 
         // methode testee
-        t.ajouterLampe(l);
+        t.ajouterTelecommandable(l);
 
         // verification
-        assertEquals(t.getLampes().get(0), l, "Il devrait y avoir la lampe lampe1");
+        assertEquals(t.getTelecommandables().get(0), l, "Il devrait y avoir la lampe lampe1");
     }
 
 
@@ -29,54 +29,38 @@ class TelecommandeTest {
         // preparation des donnees
         Telecommande t = new Telecommande();
         Lampe l = new Lampe("Lampe1");
-        t.ajouterLampe(l);
+        t.ajouterTelecommandable(l);
         Lampe l2 = new Lampe("lampe2");
 
         // methode testee
-        t.ajouterLampe(l2);
+        t.ajouterTelecommandable(l2);
 
         // verification
         Lampe[] t_l = {l, l2};
         for (int i = 0; i < 2; i++) {
-            assertEquals(t.getLampes().get(i), t_l[i], "Il devrait y avoir la lampe lampe" + i);
+            assertEquals(t.getTelecommandables().get(i), t_l[i], "Il devrait y avoir la lampe lampe" + i);
         }
     }
 
     /**
      * Active une lampe en position 0
      */
-    @Test
-    void activerLampe_Pos0() {
-        // Preparations données
-        Telecommande t = new Telecommande();
-        Lampe l = new Lampe("Lampe1");
-        t.ajouterLampe(l);
-
-        // methode testee
-        t.activerLampe(0);
-
-        // verification
-        assertEquals(t.getLampes().get(0).isAllume(), l.isAllume(), "La lampe lampe1 devrait être allumée");
-    }
-
 
     /**
      * Active une lampe en position 1
      */
     @Test
-    void activerLampe_Pos1() {
+    void activerLampe() {
         // Preparations données
         Telecommande t = new Telecommande();
         Lampe l = new Lampe("Lampe1");
-        t.ajouterLampe(l);
-        Lampe l2 = new Lampe("Lampe2");
-        t.ajouterLampe(l2);
+        t.ajouterTelecommandable(l);
 
         // methode testee
-        t.activerLampe(1);
+        t.getTelecommandables().get(0).allumer();
 
         // verification
-        assertEquals(t.getLampes().get(1).isAllume(), l2.isAllume(), "La lampe lampe2 devrait être allumée");
+        assertTrue(((Lampe) t.getTelecommandables().get(0)).isAllume(), "La lampe lampe2 devrait être allumée");
     }
 
 
@@ -88,13 +72,13 @@ class TelecommandeTest {
         // Preparations données
         Telecommande t = new Telecommande();
         Lampe l = new Lampe("Lampe1");
-        t.ajouterLampe(l);
+        t.ajouterTelecommandable(l);
 
         // verification
         // methode testee
         assertThrows(IndexOutOfBoundsException.class, () ->
         {
-            t.activerLampe(1);
+            t.ajouterTelecommandable(l);
         }, "On ne dervait pas pouvoir récupérer une lampe inexistante");
 
     }

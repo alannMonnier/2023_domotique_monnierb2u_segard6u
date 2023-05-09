@@ -17,6 +17,10 @@ public class Telecommande {
         this.telecommandables = new ArrayList<>();
     }
 
+    public ArrayList<Telecommandable> getTelecommandables() {
+        return telecommandables;
+    }
+
     /**
      * Méthode qui va ajouter une lampe dans la liste de lampes
      * @param t représente un objet télécommandable
