@@ -9,9 +9,9 @@ public class Main {
 
 		t.ajouterTelecommandable(new Lampe("Lampe1"));
 		t.ajouterTelecommandable(new Lampe("Lampe2"));
-		t.ajouterTelecommandable(new Lampe("Lampe3"));
-		t.ajouterTelecommandable(new Lampe("Lampe4"));
-		t.ajouterTelecommandable(new Lampe("Lampe5"));
+		t.ajouterTelecommandable(new Hifi());
+		t.ajouterTelecommandable(new TelecommandeChemine(new Cheminee()));
+		t.ajouterTelecommandable(new TelecommandeChemine(new Cheminee()));
 
 
 		TelecommandeGraphique tg = new TelecommandeGraphique(t);
